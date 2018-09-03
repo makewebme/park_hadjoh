@@ -1,0 +1,133 @@
+.page-often-visitors {
+
+  // Cards and conditions
+
+  .cards-wrapper,
+  .conditions-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+      width: calc(33.33333% - 10px);
+
+      @media (max-width: $bp-lg) {
+        width: calc(33.33333% - 5px);
+      }
+    }
+  }
+
+  .card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px -1px rgba($black, 0.5);
+    padding: 15px;
+    color: $white;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    hr {
+      border: 0;
+      background-color: $white;
+      height: 1px;
+    }
+  }
+
+  .card:nth-child(1) {
+    background-color: $orange;
+
+    > :first-child {
+      line-height: 48px;
+
+      @media (max-width: $bp-lg) {
+        line-height: 72px;
+      }
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .card:nth-child(2) {
+    background-image: url('../img/bg_silver.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card:nth-child(3) {
+    background-image: url('../img/bg_gold.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .status {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  // Bonus table
+
+  .bonus-table {
+    border-radius: 15px;
+    border: 1px solid $orange-darker;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+    .header,
+    .footer {
+      background-color: $orange-darker;
+      font-size: 24px;
+      font-weight: 700;
+      color: $white;
+      text-align: center;
+      padding: 10px;
+
+      .small {
+        font-size: 14px;
+        line-height: 16px;
+
+        a {
+          text-decoration: underline;
+          color: $black;
+          text-shadow: 0 0 3px $white;
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid $orange;
+
+      &:first-child {
+        padding-top: 12px;
+      }
+
+      &:last-child {
+        padding-bottom: 12px;
+      }
+    }
+
+    .col {
+      width: 33.3333%;
+      text-align: center;
+
+      &:nth-child(1) {
+        text-align: left;
+        font-weight: 700;
+      }
+    }
+
+    .row:first-child {
+      :nth-child(2),
+      :nth-child(3) {
+        line-height: 40px;
+        font-size: 30px;
+      }
+    }
+  }
+}

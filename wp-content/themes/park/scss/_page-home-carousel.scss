@@ -1,0 +1,128 @@
+.home {
+  .owl-carousel-cont {
+    @media (max-width: $bp-md) {
+      width: auto;
+      padding: 0;
+    }
+
+    @media (max-width: 780px) {
+      display: none;
+    }
+  }
+
+  .owl-carousel {
+    background-image: url('../img/slider_front_bg.jpg');
+    background-repeat: no-repeat;
+    height: 420px;
+    padding-top: 25px;
+    color: $white;
+
+    .owl-stage-outer {
+      height: calc(100% - 50px);
+    }
+
+    .owl-stage,
+    .owl-item {
+      height: 100%;
+    }
+
+    .owl-item-wrapper {
+      width: 75%;
+      margin: 0 auto;
+      overflow: hidden;
+      height: 100%;
+      background-color: rgba($black, 0.4);
+      padding: 20px;
+    }
+
+    .owl-heading {
+      font-size: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .owl-desc {
+      text-align: center;
+    }
+
+    .owl-more {
+      margin: 30px auto 0;
+      width: 200px;
+      line-height: 2;
+      text-align: center;
+      border: 2px solid $orange-darker;
+      padding: 0 20px;
+      display: table;
+      cursor: pointer;
+    }
+
+    // Навигация
+
+    .owl-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      .owl-prev,
+      .owl-next {
+        pointer-events: all;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .owl-prev,
+      .owl-next {
+        border-radius: 50%;
+        border: 2px solid $orange-darker;
+        padding: 10px;
+        outline: none;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+
+        span {
+          line-height: 40px !important;
+          display: block;
+          height: 45px;
+          text-shadow: 0 0 2px rgba($black, 0.7);
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+
+      .owl-prev {
+        left: 20px;
+      }
+
+      .owl-next {
+        right: 20px;
+      }
+    }
+
+    .owl-dots {
+      display: table;
+      margin: 10px auto 0;
+    }
+
+    .owl-dot {
+      border: 1px solid $white;
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+
+      &.active {
+        background-color: $white;
+      }
+
+      + .owl-dot {
+        margin-left: 10px;
+      }
+    }
+  }
+}

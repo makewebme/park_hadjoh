@@ -1,0 +1,140 @@
+.home .site-content {
+  &.cont {
+    @media (max-width: $bp-sm) {
+      width: 100%;
+    }
+  }
+
+  .btn-orange {
+    @media (max-width: 375px) {
+      font-size: 16px;
+    }
+  }
+
+  .info-heading {
+    text-align: center;
+    color: $grey-3;
+  }
+
+  .block-half {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    float: left;
+    width: 50%;
+
+    @media (max-width: $bp-md) {
+      width: auto;
+      float: none;
+      text-align: justify;
+    }
+
+    &.padded {
+      padding: 0 15px;
+    }
+
+    p:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  .block-left {
+    padding-right: 15px;
+
+    @media (max-width: $bp-md) {
+      padding-right: 0;
+    }
+  }
+
+  .block-right {
+    padding-left: 15px;
+
+    @media (max-width: $bp-md) {
+      padding-left: 0;
+    }
+  }
+
+  .thumb-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .img-wrapper {
+      margin-bottom: 3px;
+      overflow: hidden;
+      width: calc(25% - 2px);
+    }
+
+    &.slider-hotel .img-wrapper  {
+      cursor: pointer;
+    }
+
+    &.two-in-row .img-wrapper {
+      width: calc(50% - 2px);
+    }
+
+    img {
+      width: 100%;
+      user-select: none;
+    }
+  }
+
+  .info-hotel {
+    &-videos {
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+
+  .videos-block {
+    > * {
+      @media (max-width: $bp-md) {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .underline {
+    background-color: $grey-c;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  // Gismeteo
+
+  .block-weather-desc {
+    width: 70%;
+    float: left;
+
+    @media (max-width: $bp-md) {
+      width: auto;
+      float: none;
+      text-align: justify;
+    }
+  }
+
+  .block-weather-script {
+    width: 30%;
+    float: left;
+
+    @media (max-width: $bp-md) {
+      width: auto;
+      float: none;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+  }
+
+  .gsInformer {
+    width: 253px;
+    height:201px;
+    margin: 0 auto;
+  }
+}

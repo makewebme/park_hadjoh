@@ -1,0 +1,14 @@
+.site-footer {
+  background-image: url('../img/footer_bg.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+
+  .cont {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: $white;
+  }
+}

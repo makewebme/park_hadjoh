@@ -1,0 +1,65 @@
+.modal-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($black, 0.5);
+  z-index: 20;
+  display: none;
+
+  &-inner {
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba($black, 0.5);
+    border: 1px solid $grey-c;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    img {
+      user-select: none;
+      max-width: 100%;
+      border: 1px solid $grey-a;
+      border-radius: 5px;
+    }
+  }
+
+  .btn-prev,
+  .btn-next,
+  .btn-close {
+    position: absolute;
+    transform: translateY(-50%);
+    color: $white;
+    border-radius: 50%;
+    border: 2px solid $orange-darker;
+    width: 30px;
+    height: 30px;
+    line-height: 22px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 50;
+  }
+
+  .btn-close {
+    right: 20px;
+    top: 20px;
+    transform: none;
+    border: 0;
+  }
+
+  .btn-prev {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .btn-next {
+    bottom: 20px;
+    right: 20px;
+  }
+}

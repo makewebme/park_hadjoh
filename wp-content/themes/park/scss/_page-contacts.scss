@@ -1,0 +1,24 @@
+.page-contacts {
+  margin-bottom: 40px;
+
+  .main-heading {
+    text-align: center;
+  }
+
+  .block-half {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+
+    @media (max-width: $bp-md) {
+      width: 100%;
+    }
+  }
+
+  .requisites {
+    padding: 15px;
+    background-color: $grey-e;
+    border: 1px solid $grey-a;
+    border-radius: 7px;
+  }
+}

@@ -1,0 +1,195 @@
+.site-header {
+  background-color: $orange;
+  background-image: url('../img/header_bg_left.png'),
+                    url('../img/header_bg_right.png');
+  background-position: top left,
+                       top right;
+  background-repeat: no-repeat,
+                     no-repeat;
+  background-size: 372px 145px,
+                   418px 145px;
+  height: 145px;
+
+  @media (max-width: 1790px) {
+    background-image: url('../img/header_bg_left.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 372px 145px;
+  }
+
+  @media (max-width: 800px) {
+    height: auto;
+    background-image: none;
+  }
+
+  .cont {
+    @media (max-width: $bp-md) {
+      width: auto;
+    }
+  }
+
+  // Лого
+  .logo-wrapper {
+    float: left;
+    margin-top: 15px;
+
+    @media (max-width: 800px) {
+      display: table;
+      margin: 0 auto;
+      padding-top: 20px;
+      float: none;
+    }
+  }
+
+  .logo-img {
+    height: 120px;
+
+    @media (max-width: $bp-sm) {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  // Деревянная табличка
+  .wood-table {
+    float: left;
+    height: 145px;
+    margin-left: 15px;
+
+    @media (max-width: $bp-lg) {
+      display: none;
+    }
+  }
+
+  // Информация
+  .info {
+    float: left;
+    margin-left: 15px;
+    margin-top: 19px;
+
+    @media (max-width: $bp-md) {
+      float: right;
+    }
+
+    .phone,
+    .email {
+      margin-left: 6px;
+      color: $black;
+      text-shadow: 0 0 4px $white;
+      position: relative;
+      display: block;
+      font-size: 26px;
+      padding-left: 30px;
+
+      &:hover {
+        color: $white;
+        text-shadow: 0 0 1px $black;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+      }
+
+      @media (max-width: $bp-xs) {
+        font-size: 18px;
+        line-height: 1.7;
+      }
+    }
+
+    .phone:before {
+      top: 6px;
+      height: 20px;
+      width: 20px;
+      background-image: url('../img/icon_phone.png');
+    }
+
+    .email {
+      margin-bottom: 4px;
+    }
+
+    .email:before {
+      top: 5px;
+      background-image: url('../img/icon_email.svg');
+    }
+
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 20px;
+      float: none;
+
+      > :nth-child(1),
+      > :nth-child(2),
+      > :nth-child(3) {
+        white-space: nowrap;
+      }
+    }
+
+    .socials > * {
+      float: left;
+      height: 40px;
+      width: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      + * {
+        margin-left: 5px;
+      }
+    }
+
+    .vk {
+      background-image: url('../img/icon_social_vk.svg');
+      background-size: 30px 30px;
+
+      &:hover {
+        background-image: url('../img/icon_social_vk_light.svg');
+      }
+    }
+
+    .fb {
+      background-image: url('../img/icon_social_fb.svg');
+      background-size: 39px 39px;
+
+      &:hover {
+        background-image: url('../img/icon_social_fb_light.svg');
+      }
+    }
+
+    .ok {
+      background-image: url('../img/icon_social_ok.svg');
+      background-size: 35px 35px;
+
+      &:hover {
+        background-image: url('../img/icon_social_ok_light.svg');
+      }
+    }
+
+    .insta {
+      background-image: url('../img/icon_social_insta.svg');
+      background-size: 33px 33px;
+
+      &:hover {
+        background-image: url('../img/icon_social_insta_light.svg');
+      }
+    }
+
+    .yt {
+      background-image: url('../img/icon_social_yt.svg');
+      background-size: 45px 45px;
+      margin-left: 10px;
+      margin-top: 1px;
+
+      &:hover {
+        background-image: url('../img/icon_social_yt_light.svg');
+      }
+    }
+  }
+}
